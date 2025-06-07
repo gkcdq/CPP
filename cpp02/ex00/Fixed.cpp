@@ -1,9 +1,8 @@
 #include "Fixed.hpp"
 
-Fixed::Fixed() : nvf(0), bits(8)
+Fixed::Fixed() : nvf(0 * (1 << bits))
 {
 	std::cout << "Default constructor called" << std::endl;
-    nvf = nvf * bits;
 }
 
 Fixed::~Fixed()
@@ -17,7 +16,7 @@ int Fixed::getRawBits(void) const
 	return (nvf);
 }
 
-Fixed::Fixed(const Fixed &other):nvf(other.nvf), bits(8)
+Fixed::Fixed(const Fixed &other):nvf(other.nvf)
 {
     std::cout << "Copy constructor called" << std::endl;
     *this = other;
