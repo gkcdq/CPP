@@ -2,6 +2,8 @@
 
 ClapTrap::ClapTrap(std::string s) : Name(s), Hit_Points(10), Energy_Points(10), Attack_Damage(0){std::cout << "Constructor called" << std::endl;}
 ClapTrap::~ClapTrap(){std::cout << "Destructor called" << std::endl;};
+int ClapTrap::getHitPoints(){return Hit_Points;}
+void ClapTrap::setAttackDamage(int n){Attack_Damage += n;}
 
 void ClapTrap::attack(const std::string& target)
 {
@@ -39,9 +41,3 @@ void ClapTrap::beRepaired(unsigned int ammount)
     Energy_Points += ammount;
     return ; 
 }
-
-//
-
-int ClapTrap::getHitPoints(){return Hit_Points;}
-
-void ClapTrap::setAttackDamage(int n){Attack_Damage += n;}
