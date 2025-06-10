@@ -13,9 +13,11 @@ class ClapTrap
 	int Attack_Damage;
 
   public:
-    ClapTrap(std::string s);
-    ~ClapTrap();
-	void attack(const std::string& target);
+	ClapTrap(std::string s);
+	~ClapTrap();
+	int getHitPoints();
+	void setAttackDamage(int n);
+	void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };
