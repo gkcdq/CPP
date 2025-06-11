@@ -1,5 +1,6 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FlagTrap.hpp"
 
 int	main(int ac, char **av)
 {
@@ -33,13 +34,23 @@ int	main(int ac, char **av)
         std::cout << "\n------------------------ScavTrap--------------------------\n" << std::endl;
         ScavTrap Second_Hero("Arouf");
         //std::cout << Second_Hero.getEnergyPoints() << std::endl;
-        Second_Hero.attack("The New Bad Guy");
+        Second_Hero.attack("The Brother Bad Guy");
         //std::cout << Second_Hero.getEnergyPoints() << std::endl;
         Second_Hero.takeDamage(12);
         Second_Hero.beRepaired(3);
         Second_Hero.guardGate();
-        Second_Hero.attack("The New Bad Guy");
+        Second_Hero.attack("The Brother Bad Guy");
 
+        std::cout << "\n------------------------FlagTrap--------------------------\n" << std::endl;
+        FlagTrap Third_Hero("Nasdas");
+        Third_Hero.attack("The Father of Bad Guys");
+        Third_Hero.takeDamage(48);
+        Third_Hero.beRepaired(9);
+        Third_Hero.takeDamage(62);
+        Third_Hero.attack("The Father of Bad Guys");
+        Third_Hero.beRepaired(50);
+        Third_Hero.attack("The Father of Bad Guys");
+        Third_Hero.highFiveGuys();
 	}
 	else
 		std::cout << "USAGE: ./a.out" << std::endl;

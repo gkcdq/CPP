@@ -1,5 +1,5 @@
 NAME = a.out
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC = main.cpp Polymorphisme.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
 CXFLAGS = -Wall -Werror -Wextra -std=c++98
