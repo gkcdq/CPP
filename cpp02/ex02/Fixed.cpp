@@ -85,14 +85,14 @@ bool Fixed::operator>(const Fixed &other) const
 Fixed Fixed::operator*(const Fixed &other) const
 {
 	Fixed res;
-	res.setRawBits((this->nvf * other.nvf));
+	res.setRawBits((this->nvf * other.nvf) >> this->bits);
 	return (res);
 }
 
 Fixed Fixed::operator/(const Fixed &other) const
 {
 	Fixed res;
-	res.setRawBits((this->nvf) / other.nvf);
+	res.setRawBits(((this->nvf << this->bits) / other.nvf));
 	return (res);
 }
 

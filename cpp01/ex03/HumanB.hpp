@@ -9,12 +9,12 @@ class HumanB
 {
 private:
     std::string name;
-    Weapon *weapon;  // pointeur pour pouvoir être nullptr
+    Weapon *weapon;  
 
 public:
-    HumanB(std::string name);          // Constructeur avec uniquement le nom
+    HumanB(std::string name);        
     void attack(void);
-    void setWeapon(Weapon &weapon);   // méthode pour assigner une arme plus tard
+    void setWeapon(Weapon &weapon);  
     ~HumanB();
 };
 

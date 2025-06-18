@@ -4,14 +4,15 @@ int main (void)
 {
     Harl H;
 
-    std::cout << "All Harl can say :" << std::endl;
-    H.complain("DEBUG");
-    H.complain("INFO");
-    H.complain("WARNING");
-    H.complain("ERROR");
-    H.complain("false");
+    std::cout << std::endl << "All Harl can say :" << std::endl << std::endl;
+    std::cout << " - "; H.complain("DEBUG");
+    std::cout << " - "; H.complain("INFO");
+    std::cout << " - "; H.complain("WARNING");
+    std::cout << " - "; H.complain("ERROR");
+    std::cout << " - "; H.complain("false");
     std::cout << std::endl;
-
+    std::cout << "Infinity loop :" << std::endl;
+    std::cout << std::endl;
     std::string s[] = {"DEBUG","INFO","WARNING","ERROR"};
     int namesCount = sizeof(s) / sizeof(std::string);
     srand(time(NULL));

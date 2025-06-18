@@ -3,7 +3,6 @@
 
 # include <iostream>
 # include <string>
-
 class ClapTrap
 {
   private:
@@ -11,7 +10,6 @@ class ClapTrap
 	int Hit_Points;
 	int Energy_Points;
 	int Attack_Damage;
-
   public:
 	ClapTrap(std::string s);
 	~ClapTrap();
@@ -21,5 +19,4 @@ class ClapTrap
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 };
-
 #endif

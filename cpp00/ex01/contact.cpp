@@ -26,8 +26,11 @@ void Contact::setDarkestSecret(std::string d_s)
 
 std::string Contact::getFirstName() const
 {
-	return (first_name);
+	if (!first_name.empty())
+		return (first_name);
+	return (std::string ());
 }
+
 std::string Contact::getLastName() const
 {
 	return (last_name);
