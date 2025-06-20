@@ -80,3 +80,28 @@ void ClapTrap::setHitPoints(int n)
 	Hit_Points = n;
 	return ;
 }
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &other)
+{
+	if (this != &other)
+	{
+		Name = other.Name;
+		Hit_Points = other.Hit_Points;
+		Energy_Points = other.Energy_Points;
+		Attack_Damage = other.Attack_Damage;
+	}
+	return (*this);
+}
+
+ClapTrap::ClapTrap(const ClapTrap &other)
+{
+    std::cout << "copy constructor called" << std::endl;
+	Name = other.Name;
+	Hit_Points = other.Hit_Points;
+	Energy_Points = other.Energy_Points;
+	Attack_Damage = other.Attack_Damage;
+}
+
+ClapTrap::ClapTrap()
+{
+}

@@ -33,8 +33,25 @@ void ScavTrap::attack(const std::string &target)
 }
 void ScavTrap::guardGate()
 {
-    std::cout << getName() << " turn to Guard Gate Mode is power is leveling !!" << std::endl;
-    setAttackDamage(9979);
-    setEnergyPoints(-9999);
-    setHitPoints(5000);
+	std::cout << getName() << " turn to Guard Gate Mode is power is leveling !!" << std::endl;
+	setAttackDamage(9979);
+	setEnergyPoints(-9999);
+	setHitPoints(5000);
+}
+
+ScavTrap::ScavTrap() : ClapTrap()
+{
+}
+
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+{
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+{
+	if (this != &other)
+	{
+		ClapTrap::operator=(other);
+	}
+	return (*this);
 }

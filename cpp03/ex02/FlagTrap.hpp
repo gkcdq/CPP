@@ -8,6 +8,9 @@
 class FlagTrap : public ClapTrap
 {
   public:
+  FlagTrap();
+  FlagTrap(const FlagTrap& other);
+  FlagTrap& operator=(const FlagTrap &other);
 	FlagTrap(std::string s);
 	~FlagTrap();
     void highFiveGuys();

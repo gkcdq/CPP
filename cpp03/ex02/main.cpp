@@ -51,6 +51,9 @@ int	main(int ac, char **av)
         Third_Hero.beRepaired(50);
         Third_Hero.attack("The Father of Bad Guys");
         Third_Hero.highFiveGuys();
+        FlagTrap Kekw;
+        Kekw = Third_Hero;
+        std::cout << "Kekw Hit_Points " << Kekw.getHitPoints() << "\nThird_Hero Hit_Points " << Third_Hero.getHitPoints() << std::endl;
 	}
 	else
 		std::cout << "USAGE: ./a.out" << std::endl;

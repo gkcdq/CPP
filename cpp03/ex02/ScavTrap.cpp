@@ -38,3 +38,20 @@ void ScavTrap::guardGate()
     setEnergyPoints(-9999);
     setHitPoints(5000);
 }
+
+ScavTrap::ScavTrap() : ClapTrap()
+{
+}
+
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+{
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &other)
+{
+	if (this != &other)
+	{
+		ClapTrap::operator=(other);
+	}
+	return (*this);
+}

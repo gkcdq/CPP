@@ -13,7 +13,10 @@ class ClapTrap
 	int Attack_Damage;
 
   public:
+	ClapTrap();
 	ClapTrap(std::string s);
+	ClapTrap(const ClapTrap &other);
+	ClapTrap& operator=(const ClapTrap &other);
 	~ClapTrap();
 	std::string getName();
 	int getHitPoints();
