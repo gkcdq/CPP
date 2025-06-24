@@ -10,9 +10,12 @@ class Animal
 {
   private:
 	std::string type;
+	
 
   public:
 	Animal();
+	Animal(const Animal& other);
+	Animal& operator=(const Animal& other);
 	virtual ~Animal();
 	void setType(std::string s);
 	std::string getType() const;
@@ -26,7 +29,9 @@ class Dog : public Animal
 
   public:
 	Dog();
+	Dog(const Dog& other);
 	virtual ~Dog();
+	Brain *getBrain() const;
 	Dog& operator=(const Dog& other);
 	virtual void makeSound() const;
 };
@@ -38,6 +43,7 @@ class Cat : public Animal
 
   public:
 	Cat();
+	Cat(const Cat& other);
 	virtual ~Cat();
 	Cat& operator=(const Cat& other);
 	virtual void makeSound() const;
@@ -50,6 +56,8 @@ class WrongAnimal
 
   public:
 	WrongAnimal();
+	WrongAnimal(const WrongAnimal& other);
+	WrongAnimal& operator=(const WrongAnimal& other);
 	virtual ~WrongAnimal();
 	void setType(std::string s);
 	virtual void makeSound() const;
@@ -59,6 +67,8 @@ class WrongCat : public WrongAnimal
 {
   public:
 	WrongCat();
+	WrongCat(const WrongCat& other);
+	WrongCat& operator=(const WrongCat& other);
 	virtual ~WrongCat();
 	virtual void makeSound() const;
 };
@@ -70,6 +80,10 @@ class Brain
 
   public:
 	Brain();
+	Brain(const Brain& other);
+	std::string getIdea(size_t index) const;
+	void setIdea(size_t index, const std::string& idea);
+	Brain& operator=(const Brain& other);
 	~Brain();
 };
 

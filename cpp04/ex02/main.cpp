@@ -57,5 +57,12 @@ int main(void)
         cat2 = cat1;
     }
 
+    // Test 5: Instance de la class Animal
+    {
+        //  Animal A;
+        //  Animal B;
+        //  Animal C;
+    }
+
     return 0;
 }

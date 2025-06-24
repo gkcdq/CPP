@@ -56,6 +56,25 @@ int main(void)
 
         cat2 = cat1;
     }
+    // Test 5: random
+    {
+        std::cout << "\n\n" << std::endl;
+        Dog a;
+        a.getBrain()->setIdea(0, "I want a bone!");
+	    a.getBrain()->setIdea(1, "Chase the cat!");
+	    a.getBrain()->setIdea(99, "Nap under the sun.");
+        {
+            Dog copy = a;
+            std::cout << copy.getBrain()->getIdea(0) << std::endl;
+
+            copy.getBrain()->setIdea(0, "I want TWO bones!");
+		    copy.getBrain()->setIdea(1, "Don't chase the cat.");
+		    copy.getBrain()->setIdea(99, "Sleep inside the house.");
+            std::cout << copy.getBrain()->getIdea(0) << std::endl;
+        }
+        std::cout << a.getBrain()->getIdea(0) << std::endl;
+
+    }
 
     return 0;
 }
