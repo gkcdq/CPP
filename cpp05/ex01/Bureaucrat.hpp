@@ -4,7 +4,9 @@
 # include <iostream>
 # include <stdexcept>
 # include <string>
+# include "Form.hpp"
 
+class Form;
 class Bureaucrat
 {
   private:
@@ -29,6 +31,7 @@ class Bureaucrat
 	};
 	void increment();
 	void decrement();
+	void signForm(Form& form);
 };
 std::ostream &operator<<(std::ostream &os, Bureaucrat &up);
 

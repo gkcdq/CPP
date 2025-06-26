@@ -1,5 +1,5 @@
 NAME = a.out
-SRC = main.cpp Bureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
 CXFLAGS = -Wall -Werror -Wextra -std=c++98
