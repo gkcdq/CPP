@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "string": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "cwchar": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "new": "cpp",
+        "streambuf": "cpp",
+        "type_traits": "cpp"
+    }
+}

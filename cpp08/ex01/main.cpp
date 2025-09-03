@@ -49,5 +49,33 @@ int	main(void)
 	{
 		std::cerr << "Unexpected exception: " << e.what() << std::endl;
 	}
+	try
+	{
+		std::cout << std::endl << ">>> \"Last but not least\"" << std::endl;
+		std::vector<int> values = {1, 2, 3, 4, 5};
+		Span sp(10);
+		sp.addNumber(42);
+		sp.addNumbers(values.begin(), values.end());
+
+		std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+		std::cout << "Longest span: " << sp.longestSpan() << std::endl;
+	}
+	catch (const std::exception& e)
+	{
+		std::cerr << "Exception: " << e.what() << std::endl;
+	}
 	return (0);
 }
+
+// int main()
+// {
+// Span sp = Span(4);
+// sp.addNumber(6);
+// sp.addNumber(3);
+// sp.addNumber(17);
+// sp.addNumber(9);
+// sp.addNumber(11);
+// std::cout << sp.shortestSpan() << std::endl;
+// std::cout << sp.longestSpan() << std::endl;
+// return 0;
+// }
