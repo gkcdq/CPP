@@ -17,6 +17,7 @@ class MutantStack : public std::stack<T, Container>
 {
   public:
 	//using std::stack<T, Container>::c;
+	//using random_access_it = typename Container::random_access_iterator;
 	using iterator = typename Container::iterator;
 	using const_iterator = typename Container::const_iterator;
 	using reverse_iterator = typename Container::reverse_iterator;
