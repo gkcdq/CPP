@@ -12,7 +12,7 @@ bool	isValidNumber(const std::string &s)
 	return (true);
 }
 
-int	main(int ac, char **av)
+int main(int ac, char **av)
 {
 	if (ac < 2)
 	{
@@ -38,11 +38,22 @@ int	main(int ac, char **av)
 	}
 	size_t i = 0;
 	bool leftover = false;
-	for(; i + 1 < PM.vec_size(); i += 2)
-		PM.add_to_pair(PM.return_vec_index(i), PM.return_vec_index( i + 1));
+	for (; i + 1 < PM.vec_size(); i += 2)
+		PM.add_to_pair(PM.return_vec_index(i), PM.return_vec_index(i + 1));
 	if (i < PM.vec_size())
 		leftover = true;
-	PM.tri_pair();
-	PM.print_pairs(PM.return_vec_index(i), leftover);
+	std::cout << "Before: ";
+	for (size_t k = 0; k < PM.vec_size(); ++k)
+		std::cout << PM.return_vec_index(k) << " ";
+	std::cout << std::endl;
+	clock_t start = clock();
+	std::vector<int> sorted = PM.sort_full(leftover, (leftover ? PM.return_vec_index(i) : 0));
+	clock_t end = clock();
+	double duration = static_cast<double>(end - start) / CLOCKS_PER_SEC * 1e6;
+	std::cout << "After:  ";
+	for (size_t k = 0; k < sorted.size(); ++k)
+		std::cout << sorted[k] << " ";
+	std::cout << std::endl;
+	std::cout << "Time to process a range of " << PM.vec_size() << " elements with std::vector : " << duration << " µs" << std::endl;
 	return (0);
 }
