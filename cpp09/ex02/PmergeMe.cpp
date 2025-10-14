@@ -4,14 +4,14 @@ PmergeMe::PmergeMe(){}
 PmergeMe::PmergeMe(const PmergeMe &other)
 {
     vec = other.vec;
-    deq = other.deq;
+    pair = other.pair;
 }
 PmergeMe& PmergeMe::operator=(const PmergeMe &other)
 {
     if (this != &other)
     {
         vec = other.vec;
-        deq = other.deq;
+        pair = other.pair;
     }
     return *this;
 }
@@ -37,7 +37,7 @@ void PmergeMe::print_pairs()
 {
     for (size_t i = 0; i < pair.size(); ++i)
     {
-        std::cout << pair[i].first << " " << pair[i].second << " ";
+        std::cout << '(' << pair[i].first << ", " << pair[i].second << ')' << " ";
     }
     std::cout << std::endl;
 }
@@ -103,4 +103,14 @@ std::vector<int> PmergeMe::sort_full(bool hasLeftover, int leftover)
         grands.insert(pos, leftover);
     }
     return grands;
+}
+
+void PmergeMe::print_vec()
+{
+    int i = 0;
+    while (i < vec.size())
+    {
+        std::cout << vec[i] << ' ';
+        i++;
+    }
 }

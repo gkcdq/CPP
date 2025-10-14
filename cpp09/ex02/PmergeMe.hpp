@@ -16,7 +16,6 @@ class PmergeMe
   private:
 	std::vector<int> vec;
   std::vector<std::pair<int, int>> pair;
-	std::deque<int> deq;
 
   public:
     PmergeMe();
@@ -28,6 +27,7 @@ class PmergeMe
     void add_to_pair(int a, int b);
     int return_vec_index(int i);
     //
+    void print_vec();
     void print_pairs();
     //
     void tri_pair();

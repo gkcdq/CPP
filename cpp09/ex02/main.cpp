@@ -55,5 +55,10 @@ int main(int ac, char **av)
 		std::cout << sorted[k] << " ";
 	std::cout << std::endl;
 	std::cout << "Time to process a range of " << PM.vec_size() << " elements with std::vector : " << duration << " µs" << std::endl;
+	PmergeMe copy;
+	std::cout << std::endl << "Basic verif : " << std::endl << std::endl;
+	copy = PM;
+	std::cout << "Copy vec = "; copy.print_vec(); std::cout << std::endl; 
+	std::cout << "Copy pair = "; copy.print_pairs(); std::cout << std::endl;
 	return (0);
 }
