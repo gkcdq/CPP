@@ -25,7 +25,7 @@ void convert_all_to_float(std::string &literal);
 int literal_is_a_int(std::string literal);
 void ScalarConverter::convert(std::string &literal)
 {
-	if (check_if_char(literal) == 0)
+	if (check_if_char(literal) == 1)
 	{
 		convert_all_to_char(literal);
 	}
@@ -84,8 +84,12 @@ void convert_all_to_int(std::string &literal)
 int literal_is_a_int(std::string literal)
 {
 	int i = 0;
+    if (literal[0] == '-')
+        return(0);
 	while(literal[i])
 	{
+        if (i > 0 && literal[i] == '-')
+            return (1);
 		if (literal[i] < 48 || literal[i] > 57)
 			return (1);
 		i++;
