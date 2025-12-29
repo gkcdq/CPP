@@ -47,6 +47,14 @@ int	main(int ac, char **av)
 		};
 		trim(date);
 		trim(valueStr);
+		//std::cout << date[8] << std::endl;
+		int check_date = date[8];
+		int double_check = date[5];
+		if (check_date > 51 || double_check > 49)
+		{
+			std::cout << "Error: bad input => " << date << std::endl;
+			continue ;
+		}
 		if (date.size() != 10 || date[4] != '-' || date[7] != '-')
 		{
 			std::cout << "Error: bad input => " << date << std::endl;

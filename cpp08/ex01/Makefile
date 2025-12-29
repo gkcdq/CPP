@@ -1,4 +1,4 @@
-NAME = a.out
+NAME = span
 SRC = main.cpp Span.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++

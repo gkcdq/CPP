@@ -1,4 +1,4 @@
-NAME = a.out
+NAME = easyfind
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
